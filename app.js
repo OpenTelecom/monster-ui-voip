@@ -55,7 +55,7 @@ define(function(require) {
 		render: function(container) {
 			var self = this,
 				parent = container || $('#monster_content'),
-				template = $(monster.template(self, 'app'));
+				template = $(monster.template(self, 'app', { noCustomNumberManagement: !monster.config.whitelabel.useCustomNumberManagement }));
 
 			self.loadGlobalData(function() {
 				/* On first Load, load my office */
